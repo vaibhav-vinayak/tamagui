@@ -28,6 +28,12 @@ export async function loader({ params }) {
 
 export default function DocIntroPage() {
   const { code, frontmatter } = useLoader(loader)
+
+  if (!frontmatter || !code) {
+    console.warn(`No frontmatter/code?`, { frontmatter, code })
+    return null
+  }
+
   const Component = useMemo(() => getMDXComponent(code), [code])
 
   return (

@@ -10,7 +10,6 @@ import { HomeH1 } from '~/features/site/home/HomeHeaders'
 
 export async function generateStaticParams() {
   const frontmatters = getAllFrontmatter('data/docs/intro')
-  console.info('frontmatters', frontmatters)
   const paths = frontmatters.map(({ slug }) => ({
     slug: slug.replace(/.*docs\/intro\//, ''),
   }))

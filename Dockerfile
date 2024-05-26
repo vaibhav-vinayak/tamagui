@@ -48,4 +48,4 @@ RUN yarn x:build
 
 EXPOSE 3000
 
-CMD ["yarn", "x:serve"]
+CMD ["yarn", "x:serve:railway"]

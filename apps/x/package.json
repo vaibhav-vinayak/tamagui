@@ -11,6 +11,7 @@
     "build:prod": "yarn clean && vxrn build",
     "prod": "yarn build:prod && yarn serve",
     "serve": "vxrn serve",
+    "serve:railway": "vxrn serve --host 0.0.0.0",
     "clean": "rm -r node_modules/.vite || true && rm -r dist || true",
     "start": "node vercel-server.js"
   },
